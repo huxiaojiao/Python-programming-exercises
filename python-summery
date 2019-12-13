@@ -5,4 +5,11 @@
 注意，如果没有指定分隔符，将默认在单个或多个连续的空白字符（空格、制表符、换行符
 等）处进行拆分
 
+3.find:用于在字符串中查找子串。如果找到，就返回子串的第一个字符的索引，否则返回-1。如 'hello'.find('l') >>> 2
 
+4.lower:返回字符串的小写版本。如 'All'.lower() >>> 'all'
+
+5.replace:将指定字符串替换为另一个字符串，并返回替换后的结果。如 'i like python'.replace('python','java') >>> 'i like java'
+
+6.strip:将字符串开头和末尾的空白（但不包括中间的空白）删除，并返回删除后的结果。该方法还可以输入参数，用于删除指定的字符。如
+'**** i want to get off the* whiteplace * ***'.strip('*') >>> 'i want to get off the* whiteplace' 
