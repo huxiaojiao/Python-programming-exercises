@@ -1,4 +1,4 @@
-
+ 
 三.文件
 打开文件：要以任何方式使用文件，都得先打开文件，这样才能访问它。
 
@@ -149,3 +149,51 @@ sorted('python') >>> ['p','h','n','o','t','y']
 
 5.8 strip:将字符串开头和末尾的空白（但不包括中间的空白）删除，并返回删除后的结果。该方法还可以输入参数，用于删除指定的字符。如
 '**** i want to get off the* whiteplace * ***'.strip('*') >>> 'i want to get off the* whiteplace' 
+
+
+三.类和对象
+1.类是一个模板，可以将数据和方法进行封装。
+
+四.路径
+概念：
+一.绝对路径和相对路径
+绝对路径：总是从根目录开始
+相对路径：它相对于程序的当前工作目录
+注：单个点(.)用作目录名称时，是这个目录的缩写；两个句点(..)代表父文件夹
+
+1.os.getcwd()函数可以获取程序的当前工作路径的字符串
+2.os.chdir(path)函数可以更改当前工作目录为指定的其他目录
+3.os.makedirs()函数用来创建新文件夹。
+4.os.path.abspath(path): 返回参数路径的绝对路径
+5.os.path.isabs(path):判断参数路径是否是绝对路径，返回一个布尔值
+6.os.path.dirname(path):返回参数路径中最后一个斜杠前的所有内容
+7.os.path.basename(path):返回参数路径中最后一个斜杠后的所有内容，通常是一个文件名或目录名
+8.os.path.split(path):返回一个元组，包含参数路径中的目录名称和基本名称
+9.path.split(os.path.sep):利用字符串的split方法，返回的是路径中每个文件夹的列表
+
+五.自动化测试框架unittest
+
+1.unittest几大组成部分：
+Testcase: 用例对象，编写测试用例时要继承该类，以具有该类的属性和方法
+TestSuite: 测试用例的集合，用来组织用例，支持嵌套
+Testloader: 用例加载器，用于向TestSuite中添加用例
+TextTestRunner: 用例执行器（输出文本结果), 一般以TestSuite为单位执行用例
+TestResult:测试结果
+
+2.用例编写的规则：
+2.1 首先新建一个test开头（必须）的.py文件
+2.2 导入unittest
+2.3 编写一个Test开头（必须）的类，并继承unittest.Testcase,作为测试类
+2.4 在类中编写test开头(必须)的方法，作为用例
+
+注：用例执行顺序并非按书写顺序执行，而是按用例名ascii码先后顺序执行
+
+3.Test fixtures(用例包裹方法)：setUp,tearDown方法,用于分别在测试前及测试后执行。
+3.1 setUp()/tearDown(): 每个用例执行前/后执行一次
+3.2 setUpClass()/ tearDownClass(): 每个测试类加载时/结束时执行一次
+3.3 setUpModule()/ tearDownModule()： 每个测试模块（即一个文件）加载/ 结束时执行
+
+
+六.Requests库
+1.
+
