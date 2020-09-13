@@ -150,26 +150,39 @@ sorted('python') >>> ['p','h','n','o','t','y']
 5.8 strip:将字符串开头和末尾的空白（但不包括中间的空白）删除，并返回删除后的结果。该方法还可以输入参数，用于删除指定的字符。如
 '**** i want to get off the* whiteplace * ***'.strip('*') >>> 'i want to get off the* whiteplace' 
 
+<<<<<<< Updated upstream
 
 三.类和对象
 1.类是一个模板，可以将数据和方法进行封装。
 
-四.路径
+四.模块
 概念：
 一.绝对路径和相对路径
 绝对路径：总是从根目录开始
 相对路径：它相对于程序的当前工作目录
 注：单个点(.)用作目录名称时，是这个目录的缩写；两个句点(..)代表父文件夹
 
-1.os.getcwd()函数可以获取程序的当前工作路径的字符串
-2.os.chdir(path)函数可以更改当前工作目录为指定的其他目录
-3.os.makedirs()函数用来创建新文件夹。
-4.os.path.abspath(path): 返回参数路径的绝对路径
-5.os.path.isabs(path):判断参数路径是否是绝对路径，返回一个布尔值
-6.os.path.dirname(path):返回参数路径中最后一个斜杠前的所有内容
-7.os.path.basename(path):返回参数路径中最后一个斜杠后的所有内容，通常是一个文件名或目录名
-8.os.path.split(path):返回一个元组，包含参数路径中的目录名称和基本名称
-9.path.split(os.path.sep):利用字符串的split方法，返回的是路径中每个文件夹的列表
+1.os模块和os.path模块
+os.getcwd()函数可以获取程序的当前工作路径的字符串
+os.chdir(path)函数可以更改当前工作目录为指定的其他目录
+os.makedirs()函数用来创建新文件夹。
+os.path.abspath(path): 返回参数路径的绝对路径
+os.path.isabs(path):判断参数路径是否是绝对路径，返回一个布尔值
+os.path.dirname(path):返回参数路径中最后一个斜杠前的所有内容
+os.path.basename(path):返回参数路径中最后一个斜杠后的所有内容，通常是一个文件名或目录名
+os.path.split(path):返回一个元组，包含参数路径中的目录名称和基本名称
+path.split(os.path.sep):利用字符串的split方法，返回的是路径中每个文件夹的列表
+
+2.json模块：可以用来处理 JSON 数据字符串和python值之间的转换。需要注意的是JSON字符串总是用双引号来表示的。
+json.loads():loads是load string的缩写，表示将字符串数据转换为python的对象。
+json.dumps():dumps是dump string的缩写，表示将python的对象转换为字符串数据。
+json.load():接收文件，并将文件对象转换为python对象
+json.dump(): 接收python对象，并将它写入到文件
+
+3.time模块
+UTC：1970 年 1 月 1 号 0 点，世界协调时间。
+time.time():返回自那一刻以来的秒数，是个浮点值，这个数字称为UNIX纪元时间戳。
+time.sleep():传入数字，该函数将阻塞，直到传入的秒数流逝。
 
 五.自动化测试框架unittest
 
