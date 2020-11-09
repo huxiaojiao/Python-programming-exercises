@@ -87,6 +87,7 @@ Also please include simple test function to test the class methods.'''
 # strobject.get_string()
 # strobject.print_string()
 
+
 '''Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books.
  But Python has a built-in document function for every built-in functions.
 Please write a program to print some Python built-in functions documents, such as abs(), int(), raw_input()
@@ -120,3 +121,131 @@ And add document for your own function'''
 # print('bob has %s leg' % bob.legs)
 #
 # print(People.legs)
+
+'''Define a function that can accept two strings as input and print the string with maximum length in console.
+ If two strings have the same length, then the function should print al l strings line by line.
+'''
+# solution
+# def print_line():
+#     line1 = input()
+#     line2 = input()
+#     if len(line1) > len(line2):
+#         print(line1)
+#     elif len(line1) < len(line2):
+#         print(line2)
+#     else:
+#         print(line1)
+#         print(line2)
+#
+# print_line()
+
+'''Define a function that can accept an integer number as input and print the 
+"It is an even number" if the number is even, otherwise print "It is an odd number".
+'''
+# solution
+# def even_or_odd(n):
+#     if n % 2 == 0:
+#         print('It is an even number')
+#     else:
+#         print('It is an odd number')
+#
+#
+# even_or_odd(-9)
+
+'''Define a function which can print a dictionary where the keys are numbers between 1 and 3 
+(both included) and the values are square of keys.
+'''
+# solution
+# def dic():
+#     d = {}
+#     for i in range(4):
+#         d[i] = i ** 2
+#     return d
+# print(dic())
+
+'''Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included)
+ and the values are square of keys. The function should just print the values only.
+'''
+
+# solution
+# def dic():
+#     d = dict()
+#     for i in range(21):
+#         d[i] = i ** 2
+#     for k,v in d.items():
+#         print(v)
+# dic()
+
+'''Define a function which can generate and print a list where the values are square of numbers between 1 
+and 20 (both included).
+'''
+
+# solution
+# def generate_list():
+#     l = [i ** 2 for i in range(21)]
+#     print(l)
+#
+# generate_list()
+
+'''With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line 
+and the last half values in one line. 
+'''
+# solution
+# t = (1,2,3,4,5,6,7,8,9,10)
+# print(t[:5])
+# print(t[5:])
+
+'''Write a program to generate and print another tuple whose values are even numbers in the given 
+tuple (1,2,3,4,5,6,7,8,9,10). 
+'''
+# solution
+# t = (1,2,3,4,5,6,7,8,9,10)
+# l = [i for i in t if i % 2 == 0]
+# print(tuple(l))
+
+'''Write a program which accepts a string as input to print "Yes" if the string is "yes" or "YES" or "Yes",
+ otherwise print "No".'''
+# solution
+# s = input()
+# if s in (['Yes','yes','YES']):
+#     print('Yes')
+# else:
+#     print('No')
+
+'''Write a program which can filter even numbers in a list by using filter function. 
+The list is: [1,2,3,4,5,6,7,8,9,10].'''
+# solution1
+# def check_even(n):
+#     return n % 2 == 0
+# l = filter(check_even,[1,2,3,4,5,6,7,8,9,10])
+# print(list(l))
+
+# solution2
+# li = [1,2,3,4,5,6,7,8,9,10]
+# l = filter(lambda x: x % 2 == 0, li)
+# print(list(l))
+
+'''Write a program which can map() to make a list whose elements are square of elements in [1,2,3,4,5,6,7,8,9,10].'''
+# li = [1,2,3,4,5,6,7,8,9,10]
+# l = map(lambda x:x ** 2, li)
+# print(list(l))
+
+'''Write a program which can map() and filter() to make a list whose elements are square of even number 
+in [1,2,3,4,5,6,7,8,9,10].
+'''
+# solution 先过滤，再map
+# li = [1,2,3,4,5,6,7,8,9,10]
+# l1 = list(filter(lambda x :x % 2 == 0,li))
+# l = map(lambda x :x ** 2,l1)
+# print(list(l))
+
+'''Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).'''
+# solution
+# l = filter(lambda x: x % 2 == 0, range(1, 21)) # 为什么可以直接代表列表？
+# print(list(l))
+
+'''Write a program which can map() to make a list whose elements are square of numbers between 1 and 20 (both included).'''
+# solution
+l = map(lambda x: x ** 2, range(1, 21))
+print(list(l))
+
