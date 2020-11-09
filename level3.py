@@ -71,4 +71,77 @@ to:1'''
 #     print(k + ':' + str(d[k]))
 
 # solution 2
+# d = {}
+# s = input()
+# for i in s.split():
+#     d[i] = d.get(i, 0) + 1  # 返回键的值，如果键没有就返回默认值为键的值
+#
+# key = list(d.keys()) # 获取键列表
+# key.sort() # 原地更改该列表的排序
+#
+# for k in key:
+#     print('%s:%d' % (k, d[k]))
+
+'''Define a class named American which has a static method called printNationality.'''
+# class American():
+#     @staticmethod
+#     def printNationality():
+#         print('American')
+#
+# a = American()
+# a.printNationality()
+# American.printNationality()
+
+'''Define a class named American and its subclass NewYorker'''
+# class American():
+#     pass
+# class NewYorker(American):
+#     pass
+#
+# anAmerican = American()
+# anNewYorker = NewYorker()
+# print(anAmerican)
+# print(anNewYorker)
+
+'''Define a class named Circle which can be constructed by a radius. The Circle class has a method which can compute the area.'''
+# class Circle():
+#     def __init__(self,r):
+#         self.r = r
+#
+#     def area(self):
+#         return self.r ** 2 * 3.14
+#
+# a = Circle(4)
+# print(a.area())
+
+'''Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which can compute the area.'''
+# class Rectangle():
+#     def __init__(self, length, width):
+#         self.l = length
+#         self.w = width
+#
+#     def area(self):
+#         return self.l * self.w
+#
+# a = Rectangle(5, 9)
+# print(a.area())
+
+'''Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. 
+Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.'''
+# class Shape():
+#      def __init__(self):
+#          pass
+#      def area(self):
+#          return 0
+#
+# class Square(Shape):
+#     def __init__(self,l):
+#         Shape.__init__(self)
+#         self.length = l
+#
+#     def area(self):
+#         return self.length * self.length
+#
+# b = Square(8)
+# print(b.area())
 
