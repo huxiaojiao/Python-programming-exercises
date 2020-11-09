@@ -295,11 +295,3 @@ Then, the output of the program should be:
 #
 # for i in putnumbers(100):
 #     print(i)
-
-def foo(n):
-    while n < 10:
-        n += 1
-        yield n
-
-for i in foo(0):
-    print(i)

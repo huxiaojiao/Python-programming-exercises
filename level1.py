@@ -86,3 +86,37 @@ Also please include simple test function to test the class methods.'''
 # strobject = TestString()
 # strobject.get_string()
 # strobject.print_string()
+
+'''Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books.
+ But Python has a built-in document function for every built-in functions.
+Please write a program to print some Python built-in functions documents, such as abs(), int(), raw_input()
+And add document for your own function'''
+
+# solution
+# print(abs.__doc__)
+# print(int.__doc__)
+#print(input.__doc__)
+
+
+# def new_add(x, y):
+#     '''calculate the sum of two integers'''
+#     return x + y
+#
+#
+# print(new_add.__doc__)
+
+'''Define a class, which have a class parameter and have a same instance parameter'''
+# solution
+
+
+# class People():
+#     legs = 2
+#
+#     def __init__(self, legs=None):
+#         self.legs = legs
+#
+#
+# bob = People(1)
+# print('bob has %s leg' % bob.legs)
+#
+# print(People.legs)
