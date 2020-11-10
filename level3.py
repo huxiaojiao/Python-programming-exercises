@@ -145,3 +145,58 @@ Both classes have a area function which can print the area of the shape where Sh
 # b = Square(8)
 # print(b.area())
 
+'''Write a function to compute 5/0 and use try/except to catch the exceptions'''
+# def f():
+#     return 5 / 0
+#
+# try:
+#     f()
+# except ZeroDivisionError as e:
+#     print('error:' + str(e))
+# finally:
+#     print('finished')
+
+'''Define a custom exception class which takes a string message as attribute.'''
+# class Exception_test():
+#     def __init__(self, s):
+#         self.message = s
+#
+# e = Exception_test('wrong type')
+# print(e.message)
+
+'''Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print 
+the user name of a given email address. Both user names and company names are composed of letters only.'''
+# solution1
+# import re
+# email = input()
+# pat = r'^(\w+)@(\w+)$'
+# r = re.match(pat, email)
+# print(r.group(1))
+
+# solution2
+# s = input()
+# e = s.split('@')[0]
+# print(e)
+
+'''Assuming that we have some email addresses in the "username@companyname.com" format, please write program to 
+print the company name of a given email address. Both user names and company names are composed of letters only.'''
+# import re
+# s = input()
+# pat = r'(\w+)@(\w+)(\.com)$'
+# r = re.match(pat, s)
+# print(r.group(2))
+
+'''Write a program which accepts a sequence of words separated by whitespace as input to print the words composed of digits only.'''
+# 使用re.split()切割字符串, + 号表示至少1个，？ 号表示0个或1个，{n}表示n个，{n,m}表示n到m个，* 表示任意个
+# solution1
+# import re
+# s = input()
+# s1 = re.split(r'\s+', s)
+# l = [i for i in s1 if re.match(r'\d', i)]
+# print(l)
+
+# solution2
+# import re
+# s = input()
+# l = re.findall(r'\d+', s)
+# print(l)
