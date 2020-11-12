@@ -200,3 +200,89 @@ print the company name of a given email address. Both user names and company nam
 # s = input()
 # l = re.findall(r'\d+', s)
 # print(l)
+
+'''Write a program to compute 1/2+2/3+3/4+...+n/n+1 with a given n input by console (n>0).'''
+# solution 递归的特点:1.必须有一个明确的结束条件 2.每次进入更深一层递归时，计算量相比上一次递归应有所减少
+# 3.递归次数过多会导致栈溢出
+
+# def f(n):
+#     if n == 1:
+#         return float(n) / float(n+1)
+#     s = float(n) / float(n+1) + f(n-1)
+#     return round(s, 2)
+# print(f(5))
+
+# solution2
+# s = input()
+# sum = 0
+# for i in range(int(s)+1):
+#     sum += (float(i)/float(i+1))
+# print(round(sum, 2))
+
+'''Write a program to compute:f(n)=f(n-1)+100 when n>0 and f(0)=1 with a given n input by console (n>0).
+Example:If the following n is given as input to the program:5. Then, the output of the program should be:501'''
+# def f(n):
+#     if n == 0:
+#         return 1
+#     return f(n-1) + 100
+# s = input()
+# print(f(int(s)))
+
+'''The Fibonacci Sequence is computed based on the following formula:
+f(n)=0 if n=0
+f(n)=1 if n=1
+f(n)=f(n-1)+f(n-2) if n>1
+Please write a program to compute the value of f(n) with a given n input by console.'''
+# def fibonacci(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     elif n > 1:
+#         return fibonacci(n-1) + fibonacci(n-2)
+# print(fibonacci(7))
+
+'''The Fibonacci Sequence is computed based on the following formula:
+f(n)=0 if n=0
+f(n)=1 if n=1
+f(n)=f(n-1)+f(n-2) if n>1
+Please write a program using list comprehension to print the Fibonacci Sequence in comma separated form with a given n input by console.
+Example:
+If the following n is given as input to the program:7
+Then, the output of the program should be:
+0,1,1,2,3,5,8,13'''
+# def fi(n):
+#     if n == 0:
+#         return 0
+#     if n == 1:
+#         return 1
+#     else:
+#         return fi(n-1) + fi(n-2)
+#
+#
+# s = input()
+# l = [str(fi(i)) for i in range(int(s)+1)]
+# print(','.join(l))
+
+'''Please write a program using generator to print the even numbers between 0 and n in comma separated form while n is input by console.
+Example:
+If the following n is given as input to the program:   10
+Then, the output of the program should be:  0,2,4,6,8,10'''
+# 生成器：是一个可迭代对象，通常用for循环来迭代。
+
+
+# def even(n):
+#     i = 0
+#     while i <= n:
+#         if i % 2 == 0:
+#             yield i
+#         i += 1
+#
+#
+# s = int(input())
+# l = [str(i) for i in even(s)]
+# print(','.join(l))
+
+
+
+

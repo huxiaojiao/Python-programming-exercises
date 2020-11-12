@@ -246,6 +246,10 @@ in [1,2,3,4,5,6,7,8,9,10].
 
 '''Write a program which can map() to make a list whose elements are square of numbers between 1 and 20 (both included).'''
 # solution
-l = map(lambda x: x ** 2, range(1, 21))
-print(list(l))
+# l = map(lambda x: x ** 2, range(1, 21))
+# print(list(l))
+
+
+
+
 
