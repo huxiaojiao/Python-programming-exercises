@@ -249,7 +249,53 @@ in [1,2,3,4,5,6,7,8,9,10].
 # l = map(lambda x: x ** 2, range(1, 21))
 # print(list(l))
 
+'''Please write assert statements to verify that every number in the list [2,4,6,8] is even.'''
+# for i in [2, 4, 6, 8]:
+#     assert i % 2 == 0
 
 
+'''Please write a program which accepts basic mathematic expression from console and print the evaluation result.
+Example:
+If the following string is given as input to the program:  35+3
+Then, the output of the program should be:  38
+'''
+# expression = input()
+# print(eval(expression))
 
 
+'''Please write a binary search function which searches an item in a sorted list. The function should return the index 
+of element to be searched in the list.'''
+
+
+# def f(l, k):
+#     left = 0
+#     right = (len(l) - 1)
+#
+#     while left <= right:
+#         mid = (left + right) // 2   # 确定中间元素索引
+#         if l[mid] > k:    # 如果要搜索的值位于中间元素的左侧，说明最右侧的元素范围缩小了
+#             right = mid - 1  # 至少比中间元素值小于1
+#         elif l[mid] < k:  # 如果要搜索的值位于中间元素的右侧，说明最左侧的元素范围缩小了
+#             left = mid + 1  # 至少比中间元素值大于1
+#         else:
+#             return mid
+#     return -1
+#
+# li = [2, 4, 6, 8, 19]
+# print(f(li, 0))
+
+
+'''Please generate a random float where the value is between 10 and 100 .'''
+# import random
+# s = random.random() * 100  # random.random()代表随机返回0到1之间的浮点数
+# print(s)
+
+'''Please generate a random float where the value is between 5 and 95 .'''
+# import random
+# s = random.random()
+# print(s * 100 - 5)
+
+'''Please write a program to output a random even number between 0 and 10 inclusive using random module and list comprehension.'''
+# import random
+# s = random.choice([x for x in range(11) if x % 2 == 0])
+# print(s)
