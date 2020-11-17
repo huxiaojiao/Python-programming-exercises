@@ -301,3 +301,29 @@ Then, the output of the program should be:  0,35,70
 # l = [str(x) for x in f(s)]
 # print(','.join(l))
 
+'''Please write a program which count and print the numbers of each character in a string input by console.
+Example:
+If the following string is given as input to the program:
+
+abcdefgabc
+
+Then, the output of the program should be:
+
+a,2
+c,2
+b,2
+e,1
+d,1
+g,1
+f,1'''
+
+# s = input()
+# d = {}
+# for i in s:
+#     d[i] = d.setdefault(i, 0) + 1
+#
+# for k, v in d.items():
+#     print(k + ',' + str(v))
+
+
+

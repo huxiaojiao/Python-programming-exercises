@@ -333,3 +333,146 @@ of element to be searched in the list.'''
 # import random
 # print(random.randrange(7, 16))
 
+'''Please write a program to compress and decompress the string "hello world!hello world!hello world!hello world!".'''
+# import zlib
+# s = "hello world!hello world!hello world!hello world!"
+# t = zlib.compress(s)  #为啥报错了？
+# print(t)
+# print(zlib.decompress(t))
+
+'''Please write a program to print the running time of execution of "1+1" for 100 times.'''
+# from timeit import Timer
+# t = Timer('for i in range(100): 1 + 1')
+# print(t.timeit())
+
+'''Please write a program to shuffle and print the list [3,6,7,8].'''
+# from random import shuffle
+# li = [3,6,7,8]
+# shuffle(li)
+# print(li)
+
+'''Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"]
+and the object is in ["Hockey","Football"].'''
+# subject = ["I", "You"]
+# verb = ["Play", "Love"]
+# object = ["Hockey", "Football"]
+# for i in subject:
+#     for j in verb:
+#         for e in object:
+#            s = i + ' ' + j + ' ' + e
+#            print(s)
+
+'''Please write a program to print the list after removing delete even numbers in [5,6,77,45,22,12,24].'''
+# l = [5,6,77,45,22,12,24]
+# li = [x for x in l if x % 2 != 0]
+# print(li)
+
+'''By using list comprehension, please write a program to print the list after removing delete numbers which 
+are divisible by 5 and 7 in [12,24,35,70,88,120,155].'''
+# l = [12,24,35,70,88,120,155]
+# li = [x for x in l if not (x % 5 == 0 and x % 7 == 0)]
+# print(li)
+
+'''By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 
+4th,6th numbers in [12,24,35,70,88,120,155].'''
+
+# solution 2
+# li = [12, 24, 35, 70, 88, 120, 155]
+# li = [x for (i, x) in enumerate(li) if i % 2 != 0]
+# print(li)
+
+'''By using list comprehension, please write a program generate a 3*5*8 3D array whose each element is 0.'''
+# l = [[[0 for i in range(8)] for j in range(5)] for k in range(3)]
+# print(l)
+
+'''By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers
+ in [12,24,35,70,88,120,155].'''
+# l = [12,24,35,70,88,120,155]
+# li = [x for (i, x) in enumerate(l) if i not in (0, 4, 5)]
+# print(li)
+
+'''By using list comprehension, please write a program to print the list after removing the value 24 in 
+[12,24,35,24,88,120,155].'''
+# l = [12,24,35,24,88,120,155]
+# li = [x for x in l if x != 24]
+# print(li)
+
+'''With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list 
+whose elements are intersection of the above given lists.'''
+# l1 = set([1,3,6,78,35,55])
+# l2 = set([12,24,35,24,88,120,155])
+# l = l1 & l2
+# print(list(l))
+
+'''With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all duplicate 
+values with original order reserved.'''
+# l = [12,24,35,24,88,120,155,88,120,155]
+# li = set(l)
+# nl = list(li)
+# nl.sort(reverse=True)
+# print(nl)
+
+'''Define a class Person and its two child classes: Male and Female. All classes have a method "getGender"
+ which can print "Male" for Male class and "Female" for Female class.'''
+# class Person():
+#     def getGender(self):
+#         print('unknown')
+#
+# class Male(Person):
+#     def getGender(self):
+#         print('Male')
+#
+# class Female(Person):
+#     def getGender(self):
+#         print('Female')
+#
+#
+# anna = Female()
+# bob= Male()
+# cindy = Person()
+# anna.getGender()
+# bob.getGender()
+# cindy.getGender()
+
+'''Please write a program which accepts a string from console and print it in reverse order.
+
+Example:
+If the following string is given as input to the program:
+
+rise to vote sir
+
+Then, the output of the program should be:
+
+ris etov ot esir'''
+
+# s = input()
+# print(s[::-1])
+
+'''Please write a program which accepts a string from console and print the characters that have even indexes.
+
+Example:
+If the following string is given as input to the program:
+
+H1e2l3l4o5w6o7r8l9d
+
+Then, the output of the program should be:
+
+Helloworld'''
+
+# s = input()
+# print(s[::2])
+
+'''Please write a program which prints all permutations of [1,2,3]'''
+# import itertools
+# print (list(itertools.permutations([1, 2, 3])))
+
+'''Write a program to solve a classic ancient Chinese puzzle: 
+We count 35 heads and 94 legs among the chickens and rabbits in a farm. How many rabbits and how many chickens do we have?'''
+# chicken = 0
+# rabbit = 0
+# for i in range(36):
+#     if i * 2 + (35 - i) * 4 == 94:
+#         chicken = i
+#         rabbit = 35 -i
+#
+# print('chicken:%s, rabbits:%s' % (chicken, rabbit))
